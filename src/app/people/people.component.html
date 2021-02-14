@@ -1,0 +1,27 @@
+<ng-container *ngIf="displayList; then showList else showSingleElement">
+</ng-container>
+
+<ng-template #showList>
+
+  <app-custom-paginator
+    (clickNext)="peopleService.moveToNextPage()"
+    (clickPrevious)="peopleService.moveToPreviousPage()"
+    [enableNext]="peopleService.nextLinkChange | async"
+    [enablePrevious]="peopleService.previousLinkChange | async"
+  >
+  </app-custom-paginator>
+  <app-list-of-elements
+    (clickOnElement)="viewPersonFromList($event)"
+    [list]="peopleService.list | async"
+    icon="person">
+  </app-list-of-elements>
+</ng-template>
+
+<ng-template #showSingleElement>
+  <app-detail-view
+    [element]="peopleService.singleElement"
+    [proprietiesToDisplay]="indexesToDisplay"
+    backLink="/people"
+    icon="person">
+  </app-detail-view>
+</ng-template>

@@ -1,0 +1,15 @@
+mat-card {
+  margin: 20px;
+  width: 250px;
+  float: left;
+  text-align: center;
+
+  img {
+    object-fit: none;
+  }
+
+  .card-info {
+    font-family: 'Star Jedi', arial, serif;
+    font-size: 1.5em;
+  }
+}

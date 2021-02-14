@@ -1,0 +1,24 @@
+<ng-container *ngIf="list; then showList else showError">
+</ng-container>
+
+<ng-template #showList>
+  <mat-list>
+    <mat-divider></mat-divider>
+    <ng-container *ngFor="let element of list">
+      <mat-list-item (click)="clickOnElement.emit(element)" class="cursor-pointer">
+        <mat-icon mat-list-icon>{{icon}}</mat-icon>
+        <div mat-line>{{element.name ? element.name : element.title}}</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </ng-container>
+  </mat-list>
+</ng-template>
+
+<ng-template #showError>
+  <br>
+  <br>
+  <app-spinner-no-record
+    message="0 record found"
+  >
+  </app-spinner-no-record>
+</ng-template>

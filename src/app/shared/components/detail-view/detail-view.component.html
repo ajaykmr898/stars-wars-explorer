@@ -1,0 +1,40 @@
+<a [routerLink]="[backLink]" mat-stroked-button>
+  <mat-icon>keyboard_arrow_left</mat-icon>
+  Back to list</a>
+<ng-container *ngIf="element; then showElement else showError">
+</ng-container>
+
+<ng-template #showElement>
+  <div *ngIf="element" class="content">
+    <mat-card class="personalDetails">
+      <mat-card-header>
+        <div mat-card-avatar>
+          <mat-icon>{{icon}}</mat-icon>
+        </div>
+        <mat-card-title>{{element.name ? element.name : element.title}}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <table>
+          <tr>
+            <th>Info label</th>
+            <th>Info value</th>
+          </tr>
+          <tr *ngFor="let prop of proprietiesToDisplay">
+            <td>{{prop | snakeToTitle | titlecase}}</td>
+            <td>{{element[prop]}}</td>
+          </tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-template>
+
+<ng-template #showError>
+  <br>
+  <br>
+  <app-spinner-no-record
+    message="Resource not found"
+  >
+  </app-spinner-no-record>
+</ng-template>

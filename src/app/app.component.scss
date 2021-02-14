@@ -1,0 +1,73 @@
+@font-face {
+  font-family: star jedi;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Star Jedi'), local('StarJedi-Regular'), url(../assets/fonts/jedi.woff) format('woff'), url(../assets/fonts/jedi.ttf) format('truetype')
+}
+
+mat-toolbar {
+  background: url('../assets/death.png');
+  color: var(--sw-yellow);
+  height: 30%;
+  background-size: 100% 115%;
+  // for fixed toolbar
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+
+  p {
+    margin: auto;
+    text-align: center !important;
+    text-align: -moz-center !important;
+    text-align: -webkit-center !important;
+    white-space: pre-wrap;
+    line-height: 1;
+    font-family: 'Star Jedi', arial, serif;
+    font-size: 2em;
+  }
+}
+
+.route-content {
+  max-height: 70%;
+}
+
+.top-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 50%;
+  min-width: 350px;
+  max-width: 600px;
+}
+
+button:focus {
+  outline: none;
+}
+
+li:focus {
+  outline: none;
+}
+
+mat-drawer {
+  .close-icon {
+    font-size: 3.5em;
+    margin-left: 42%;
+    color: var(--sw-black);
+    margin-top: 50px;
+  }
+}
+
+.menu-drawer-div {
+  height: 100px;
+  background: linear-gradient(180deg, var(--sw-yellow), #ffff);
+  text-align: center;
+
+  p {
+    font-family: 'Star Jedi', arial, serif;
+    font-size: 2.5em;
+    padding-top: 39px;
+    color: black;
+  }
+}

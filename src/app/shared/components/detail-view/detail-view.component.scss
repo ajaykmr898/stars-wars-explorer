@@ -1,0 +1,33 @@
+.content {
+  padding-top: 10%;
+  width: 100%;
+  text-align: -webkit-center;
+}
+
+.personalDetails {
+  width: 70%;
+  max-width: 600px;
+}
+
+mat-card-content {
+  // classic w3 school table
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}
+
+button {
+  font-size: 1.5em;
+}

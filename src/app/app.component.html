@@ -1,0 +1,50 @@
+<mat-drawer-container class="top-container">
+  <mat-drawer #drawer class="sidenav" mode="over">
+    <div class="menu-drawer-div">
+      <p>Menu</p>
+    </div>
+
+    <mat-list class="cursor-pointer">
+      <mat-list-item (click)="drawer.toggle()" [routerLink]="['/home']">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <div mat-line>Home</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item (click)="drawer.toggle()" [routerLink]="['/people']">
+        <mat-icon mat-list-icon>people</mat-icon>
+        <div mat-line>People</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item (click)="drawer.toggle()" [routerLink]="['/movies']">
+        <mat-icon mat-list-icon>movie</mat-icon>
+        <div mat-line>Movies</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item (click)="drawer.toggle()" [routerLink]="['/planets']">
+        <mat-icon mat-list-icon>public</mat-icon>
+        <div mat-line>Planets</div>
+      </mat-list-item>
+    </mat-list>
+
+    <div>
+      <mat-icon (click)="drawer.toggle()"
+                class="cursor-pointer close-icon">
+        cancel
+      </mat-icon>
+    </div>
+
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar>
+      <button (click)="drawer.toggle()" aria-label="Button to open side navigation bar"
+              class="example-icon"
+              mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <p>{{toolbarTitle}}</p>
+    </mat-toolbar>
+    <div class="route-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
