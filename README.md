@@ -25,7 +25,7 @@ You can run this project on local machine in 2 ways:
 
 If you have docker installed on your computer, you can run following commands:
 ```sh
-$ git clone https://github.com/ajaykmr898/stars-wars-explorer.git
+$ git clone https://github.com/ajaykmr898/star-wars-explorer.git
 $ cd star-wars-explorer
 $ chmod +x run.sh
 $ ./run.sh
@@ -33,7 +33,7 @@ $ ./run.sh
 
 If you want to run this application without docker, perform following commands:
 ```sh
-$ git clone https://github.com/ajaykmr898/stars-wars-explorer.git
+$ git clone https://github.com/ajaykmr898/star-wars-explorer.git
 $ cd star-wars-explorer
 $ npm start
 ```
