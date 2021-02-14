@@ -9,7 +9,7 @@ Deployed version of this application is served on [AWS Amplify](https://aws.amaz
 
 ### Local Requirements
 - Git >= 1.8
-- Docker >= 8.03
+- Docker >= 18.03
 
 This project is developed on local machine with [Docker](https://www.docker.com) containers tecnology.
 
