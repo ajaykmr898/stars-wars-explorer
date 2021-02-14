@@ -30,7 +30,7 @@ $ cd star-wars-explorer
 $ chmod +x run.sh
 $ ./run.sh
 ```
-run.sh is just a bash script to run automatically some docker commands.
+run.sh is just a bash script to run automatically some shell commands to automate the compiling.
 
 If you want to run this application without docker, perform following commands:
 ```sh
